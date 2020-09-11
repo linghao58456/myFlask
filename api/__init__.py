@@ -7,4 +7,4 @@ from flask import Blueprint
 
 api = Blueprint("api", __name__)
 
-from api import errors, userView
+from api import errors, userView, configurationView

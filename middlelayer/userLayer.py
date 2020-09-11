@@ -38,8 +38,8 @@ class UserLayer:
             pwd = md5(password=password)
             response = self.user.insert_user(username=username, password=pwd)
             if response:
-                result = self.select_user(username=username)
-                return {"code": 1000, "data": result['data'], "message": "注册成功"}
+                results = self.select_user(username=username)
+                return {"code": 1000, "data": results['data'], "message": "注册成功"}
             return {"code": 9999, "data": "", "message": "注册失败，请重新注册"}
         return {"code": 9999, "data": result['data'], "message": "用户已存在"}
 

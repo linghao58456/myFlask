@@ -34,6 +34,6 @@ def register_blueprints(app):
 
 
 def create_tables(app):
-    from model import users
+    from model import users, configurations
 
     db.create_all(app=app)

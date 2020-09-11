@@ -32,7 +32,7 @@ def search_user():
 @api.route("/forgetPassword", methods=["POST"])
 def forget_password():
     data = request.get_json()
-    response = user.update_user_password(data['username'], data['password'])
+    response = user.update_user_password(username=data['username'], newPassword=data['password'])
     return jsonify(response)
 
 
