@@ -19,3 +19,4 @@ def get_configuration_detail():
     response = request.args.get("systemName")
     result = config.select_system(systemName=response)
     return jsonify(result)
+

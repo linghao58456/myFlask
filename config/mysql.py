@@ -13,5 +13,6 @@ def dbConfig():
     port = 3306
     return {"host": host, "username": username, "password": password, "db": dbName, "port": port}
 
+
 def checkValue():
     return "myTest"

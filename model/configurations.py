@@ -45,7 +45,7 @@ class Database(db.Model):
     db_ip = Column(String(64), nullable=False, comment="数据库地址")
     db_port = Column(Integer(), nullable=False, comment="数据库名称")
     db_username = Column(String(64), nullable=False, comment="数据库用户名")
-    db_password = Column(String(64), nullable=False, comment="数据库用户名")
+    db_password = Column(String(64), nullable=False, comment="数据库密码")
     status = Column(Boolean, server_default="0", nullable=False, comment="0:生效,1:无效")
     creatorId = Column(Integer, ForeignKey("users.user_id"), nullable=False, comment="创建者id")
     modifyId = Column(Integer, ForeignKey("users.user_id"), nullable=False, comment="修改者id")
