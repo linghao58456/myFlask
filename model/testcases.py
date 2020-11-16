@@ -14,7 +14,7 @@ class functional(db.Model):
     case_step = Column(String(255), nullable=False, comment="用例步骤")
     case_front = Column(String(255), nullable=True, comment="前置条件")
     case_expected = Column(String(255), nullable=False, comment="预期结果")
-    case_actual = Column(String(255), nullable=False, comment="实际结果")
+    case_actual = Column(String(255), nullable=True, comment="实际结果")
     remark = Column(String(255), nullable=True, comment="备注信息")
     status = Column(Boolean, server_default="0", nullable=False, comment="0:生效,1:无效")
     creatorId = Column(Integer, ForeignKey("users.user_id"), nullable=False, comment="创建者id")
