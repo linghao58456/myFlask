@@ -8,7 +8,7 @@ class functional(db.Model):
     __tableName__ = "functional"
 
     id = Column(Integer, primary_key=True, autoincrement=True, comment="用例id")
-    case_name = Column(String(64), nullable=False, comment="用例名称")
+    case_name = Column(String(64), unique=True, nullable=False, comment="用例名称")
     case_des = Column(String(64), nullable=True, comment="用例描述")
     case_pri = Column(Boolean, server_default="1", comment="优先级(0:高，1:中，2:低)")
     case_step = Column(String(255), nullable=False, comment="用例步骤")
@@ -28,7 +28,7 @@ class interface(db.Model):
     __tableName__ = "interface"
 
     id = Column(Integer, primary_key=True, autoincrement=True, comment="用例id")
-    case_name = Column(String(64), nullable=False, comment="用例名称")
+    case_name = Column(String(64), unique=True, nullable=False, comment="用例名称")
     case_des = Column(String(255), nullable=True, comment="用例描述")
     case_address = Column(String(64), nullable=False, comment="接口地址")
     case_path = Column(String(255), nullable=False, comment="接口路径")
