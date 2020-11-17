@@ -40,7 +40,7 @@ class interface(db.Model):
     case_expected = Column(String(255), nullable=False, comment="预期结果")
     case_actual = Column(String(255), nullable=True, comment="实际结果")
     remark = Column(String(255), nullable=True, comment="备注信息")
-    status = Column(Boolean, server_default="0", nullable=True, comment="0:生效,1:无效")
+    status = Column(Boolean, server_default="0", nullable=False, comment="0:生效,1:无效")
     creatorId = Column(Integer, ForeignKey("users.user_id"), nullable=True, comment="创建者id")
     modifyId = Column(Integer, ForeignKey("users.user_id"), nullable=True, comment="修改者id")
     create_time = Column(TIMESTAMP, server_default=func.now(), nullable=False, comment="创建时间")
